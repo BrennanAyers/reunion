@@ -13,4 +13,14 @@ class Activity
   def total_cost
     participants.values.sum
   end
+
+  def split
+    total_cost / @participants.length
+  end
+
+  def owed
+    @participants.transform_values do |cost|
+      -(cost - split)
+    end
+  end
 end
