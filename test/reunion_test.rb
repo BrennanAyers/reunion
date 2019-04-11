@@ -21,7 +21,7 @@ class ReunionTest < Minitest::Test
   end
 
   def test_it_can_add_activities
-    @reuinion.add_activity(@brunch)
+    @reunion.add_activity(@brunch)
 
     assert_equal [@brunch], @reunion.activities
   end
