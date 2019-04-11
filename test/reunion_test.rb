@@ -19,4 +19,10 @@ class ReunionTest < Minitest::Test
   def test_it_starts_with_no_activities
     assert_equal [], @reunion.activities
   end
+
+  def test_it_can_add_activities
+    @reuinion.add_activity(@brunch)
+
+    assert_equal [@brunch], @reunion.activities
+  end
 end
